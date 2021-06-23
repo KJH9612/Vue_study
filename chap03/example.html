@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue-underline1{
+            text-decoration: underline;
+            text-decoration-color: blue;
+        }
+        .blue-underline2{
+            text-decoration: line-through;
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p><a :href="link">네이버로 연결</a></p>
+        <p><img :src="imageName" alt=""></p>
+        <p v-bind:align="lAlign">왼쪽 정렬</p>
+        <p v-bind:align="cAlign">가운데 정렬</p>
+        <p v-bind:align="rAlign">오른쪽 정렬</p>
+        <p v-bind:style="{color:fColor}">인라인 스타일로 글자색 빨간색</p>
+        <p v-bind:style="{fontSize:fSize}">글자크기150%</p>
+        <p v-bind:style="{fontSize:fSize, color:fColor, backgroundColor:fBgColor}">글자크기150% 빨간색 배경은 노란색</p>
+        <p v-bind:class="class1">blue-unerline class 지정</p>
+        <p v-bind:class="[class1, class2]">blue-underline, strike-through class</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                link:'https://www.naver.com/',
+                imageName: 'rrr',
+                lAlign:'left',
+                cAlign:'center',
+                rAlign:'right',
+                fColor:'red',
+                fSize:'150%',
+                fBgColor:'yellow',
+                class1:'blue-underline1',
+                class2:'blue-underline2'
+            }
+        })
+    </script>
+</body>
+</html>
