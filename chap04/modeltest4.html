@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <label>
+            <input type="checkbox" value='Orange' v-model='check'>Orange
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" value='Banana' v-model='check'>Banana
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" value='Apple' v-model='check'>Apple
+        </label>
+        <br>
+        선택한 과일 : {{check}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                check:[]
+            }
+        })
+    </script>
+</body>
+</html>
